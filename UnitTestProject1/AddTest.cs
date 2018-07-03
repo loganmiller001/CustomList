@@ -7,31 +7,35 @@ namespace UnitTestProject1
     [TestClass]
     public class AddTest
     {
+        public MadeUpList myList;
+        
         [TestMethod]
         public void AddOneElement_Add_IndexZero()
         {
-            AddTest myList = new AddTest();
+            MadeUpList myList = new MadeUpList();
+            int[] MadeUpList = new[] {0 };
             int expectedValue = 16;
             int actualValue;
 
-            myList.Add(expectedValue);
-            actualValue = myList[0];
+            myList.AddIndex(expectedValue);
+            actualValue = MadeUpList[0];
 
             Assert.AreEqual(expectedValue, actualValue);
         }
         [TestMethod]
         public void AddTwoElements_Add_IndexZeroToOne()
         {
-            AddTest myList = new AddTest();
+            MadeUpList myList = new MadeUpList();
+            int[] MadeUpList = new[] {0, 1 };
             int expectedValue1 = 16;
             int expectedValue2 = 15;
             int actualValue1;
             int actualValue2;
 
-            myList.Add(expectedValue1);
-            myList.Add(expectedValue2);
-            actualValue1 = myList[0];
-            actualValue2 = myList[1];
+            myList.AddIndex(expectedValue1);
+            myList.AddIndex(expectedValue2);
+            actualValue1 = MadeUpList[0];
+            actualValue2 = MadeUpList[1];
 
             Assert.AreEqual(expectedValue1, actualValue1);
             Assert.AreEqual(expectedValue2, actualValue2);
@@ -39,7 +43,8 @@ namespace UnitTestProject1
         [TestMethod]
         public void AddFourElements_Add_IndexZeroToThree()
         {
-            AddTest myList = new AddTest();
+            MadeUpList myList = new MadeUpList();
+            int[] MadeUpList = new[] { 0, 1, 2, 3};
             int expectedValue1 = 16;
             int expectedValue2 = 15;
             int expectedValue3 = 14;
@@ -49,14 +54,14 @@ namespace UnitTestProject1
             int actualValue3;
             int actualValue4;
 
-            myList.Add(expectedValue1);
-            myList.Add(expectedValue2);
-            myList.Add(expectedValue3);
-            myList.Add(expectedValue4);
-            actualValue1 = myList[0];
-            actualValue2 = myList[1];
-            actualValue3 = myList[2];
-            actualValue4 = myList[3];
+            myList.AddIndex(expectedValue1);
+            myList.AddIndex(expectedValue2);
+            myList.AddIndex(expectedValue3);
+            myList.AddIndex(expectedValue4);
+            actualValue1 = MadeUpList[0];
+            actualValue2 = MadeUpList[1];
+            actualValue3 = MadeUpList[2];
+            actualValue4 = MadeUpList[3];
 
             Assert.AreEqual(expectedValue1, actualValue1);
             Assert.AreEqual(expectedValue2, actualValue2);
@@ -67,7 +72,8 @@ namespace UnitTestProject1
         [TestMethod]
         public void AddTenElements_Add_IndexZeroToNine()
         {
-            AddTest myList = new AddTest();
+            MadeUpList myList = new MadeUpList();
+            int[] MadeUpList = new[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
             int expectedValue1 = 16;
             int expectedValue2 = 15;
             int expectedValue3 = 14;
@@ -89,26 +95,26 @@ namespace UnitTestProject1
             int actualValue9;
             int actualValue10;
 
-            myList.Add(expectedValue1);
-            myList.Add(expectedValue2);
-            myList.Add(expectedValue3);
-            myList.Add(expectedValue4);
-            myList.Add(expectedValue5);
-            myList.Add(expectedValue6);
-            myList.Add(expectedValue7);
-            myList.Add(expectedValue8);
-            myList.Add(expectedValue9);
-            myList.Add(expectedValue10);
-            actualValue1 = myList[0];
-            actualValue2 = myList[1];
-            actualValue3 = myList[2];
-            actualValue4 = myList[3];
-            actualValue5 = myList[4];
-            actualValue6 = myList[5];
-            actualValue7 = myList[6];
-            actualValue8 = myList[7];
-            actualValue9 = myList[8];
-            actualValue10 = myList[9];
+            myList.AddIndex(expectedValue1);
+            myList.AddIndex(expectedValue2);
+            myList.AddIndex(expectedValue3);
+            myList.AddIndex(expectedValue4);
+            myList.AddIndex(expectedValue5);
+            myList.AddIndex(expectedValue6);
+            myList.AddIndex(expectedValue7);
+            myList.AddIndex(expectedValue8);
+            myList.AddIndex(expectedValue9);
+            myList.AddIndex(expectedValue10);
+            actualValue1 = MadeUpList[0];
+            actualValue2 = MadeUpList[1];
+            actualValue3 = MadeUpList[2];
+            actualValue4 = MadeUpList[3];
+            actualValue5 = MadeUpList[4];
+            actualValue6 = MadeUpList[5];
+            actualValue7 = MadeUpList[6];
+            actualValue8 = MadeUpList[7];
+            actualValue9 = MadeUpList[8];
+            actualValue10 = MadeUpList[9];
 
             Assert.AreEqual(expectedValue1, actualValue1);
             Assert.AreEqual(expectedValue2, actualValue2);
@@ -127,6 +133,8 @@ namespace UnitTestProject1
         [TestMethod]
         public void AddTwelveElements_Add_IndexZeroToEleven()
         {
+            MadeUpList myList = new MadeUpList();
+            int[] MadeUpList = new[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 };
             int expectedValue1 = 12;
             int expectedValue2 = 11;
             int expectedValue3 = 10;
@@ -152,30 +160,30 @@ namespace UnitTestProject1
             int actualValue11;
             int actualValue12;
 
-            myList.Add(expectedValue1);
-            myList.Add(expectedValue2);
-            myList.Add(expectedValue3);
-            myList.Add(expectedValue4);
-            myList.Add(expectedValue5);
-            myList.Add(expectedValue6);
-            myList.Add(expectedValue7);
-            myList.Add(expectedValue8);
-            myList.Add(expectedValue9);
-            myList.Add(expectedValue10);
-            myList.Add(expectedValue11);
-            myList.Add(expectedValue12);
-            actualValue1 = myList[0];
-            actualValue2 = myList[1];
-            actualValue3 = myList[2];
-            actualValue4 = myList[3];
-            actualValue5 = myList[4];
-            actualValue6 = myList[5];
-            actualValue7 = myList[6];
-            actualValue8 = myList[7];
-            actualValue9 = myList[8];
-            actualValue10 = myList[9];
-            actualValue11 = myList[10];
-            actualValue12 = myList[11];
+            myList.AddIndex(expectedValue1);
+            myList.AddIndex(expectedValue2);
+            myList.AddIndex(expectedValue3);
+            myList.AddIndex(expectedValue4);
+            myList.AddIndex(expectedValue5);
+            myList.AddIndex(expectedValue6);
+            myList.AddIndex(expectedValue7);
+            myList.AddIndex(expectedValue8);
+            myList.AddIndex(expectedValue9);
+            myList.AddIndex(expectedValue10);
+            myList.AddIndex(expectedValue11);
+            myList.AddIndex(expectedValue12);
+            actualValue1 = MadeUpList[0];
+            actualValue2 = MadeUpList[1];
+            actualValue3 = MadeUpList[2];
+            actualValue4 = MadeUpList[3];
+            actualValue5 = MadeUpList[4];
+            actualValue6 = MadeUpList[5];
+            actualValue7 = MadeUpList[6];
+            actualValue8 = MadeUpList[7];
+            actualValue9 = MadeUpList[8];
+            actualValue10 = MadeUpList[9];
+            actualValue11 = MadeUpList[10];
+            actualValue12 = MadeUpList[11];
 
             Assert.AreEqual(expectedValue1, actualValue1);
             Assert.AreEqual(expectedValue1, actualValue2);
