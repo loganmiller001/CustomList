@@ -4,14 +4,14 @@ using CustomList;
 namespace UnitTestProject1
 {
     [TestClass]
-    public class RemoveTest
+    public class RemoveTest<T>
     {
-        public MadeUpList myList;
+        public MadeUpList<T> myList;
 
         [TestMethod]
         public void RemoveOneElement_RemoveCount_IndexZero()
         {
-            MadeUpList myList = new MadeUpList();
+            MadeUpList<T> myList = new MadeUpList<T>();
             int[] MadeUpList = new int[] {16, 15 };
             int expectedValue = 16;
             int actualValue;
@@ -24,7 +24,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void RemoveTwoElements_RemoveCount_IndexZeroToOne()
         {
-            MadeUpList myList = new MadeUpList();
+            MadeUpList<T> myList = new MadeUpList<T>();
             int[] MadeUpList = new[] {16, 15, 14, 13 };
             int expectedValue1 = 16;
             int expectedValue2 = 15;
@@ -42,7 +42,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void RemoveFourElements_Remove_IndexZeroToThree()
         {
-            MadeUpList myList = new MadeUpList();
+            MadeUpList<T> myList = new MadeUpList<T>();
             int[] MadeUpList = new[] {16, 15, 14, 13, 12, 11, 10};
             int expectedValue1 = 16;
             int expectedValue2 = 15;
@@ -71,7 +71,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void RemoveTenElements_Remove_IndexZeroToNine()
         {
-            MadeUpList myList = new MadeUpList();
+            MadeUpList<T> myList = new MadeUpList<T>();
             int[] MadeUpList = new[] {16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3  };
             int expectedValue1 = 16;
             int expectedValue2 = 15;
@@ -132,7 +132,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void RemoveTwelveElements_Remove_IndexZeroToEleven()
         {
-            MadeUpList myList = new MadeUpList();
+            MadeUpList<T> myList = new MadeUpList<T>();
             int[] MadeUpList = new[] { 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
             int expectedValue1 = 12;
             int expectedValue2 = 11;

@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace CustomList
 {
-    class Program
+    public interface IEnumerable
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }

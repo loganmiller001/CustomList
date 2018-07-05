@@ -5,13 +5,13 @@ using CustomList;
 namespace UnitTestProject1
 {
     [TestClass]
-    public class IndexerTest
+    public class IndexerTest<T>
     {
-        public MadeUpList myList;
+        public MadeUpList<T> myList;
         [TestMethod]
         public void CheckIndexer_MyIndexer_CheckValues()
         {
-            MadeUpList myMadeUpList = new MadeUpList();
+            MadeUpList<T> myMadeUpList = new MadeUpList<T>();
             int[] myList = new[] {12, 13, 14, 15, 16, 17, 18 };
             myList[2] = 15;
             myList[3] = 16;
