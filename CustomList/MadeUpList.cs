@@ -21,8 +21,18 @@ namespace CustomList
             MadeUpList[] myList = new MadeUpList[12];
             myList[0] = new MadeUpList {};
             myList[1] = new MadeUpList {};
+            myList[2] = new MadeUpList {};
+
             
             
+        }
+
+        public void RemoveCount(int value)
+        {
+            MadeUpList[] myList = new MadeUpList[12];
+            int[] MadeUpList = new[] {12, 13, 14, 15, 16 };
+            MadeUpList.Except(new int[] { 12 }).ToArray();
+
         }
 
     }

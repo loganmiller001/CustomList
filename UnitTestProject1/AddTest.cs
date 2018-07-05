@@ -10,7 +10,7 @@ namespace UnitTestProject1
         public MadeUpList myList;
 
         [TestMethod]
-        public void AddOneElement_Add_IndexZero()
+        public void AddOneElement_AddIndex_IndexZero()
         {
             MadeUpList myList = new MadeUpList();
             int[] MadeUpList = new[] { 16 };
@@ -23,7 +23,7 @@ namespace UnitTestProject1
             Assert.AreEqual(expectedValue, actualValue);
         }
         [TestMethod]
-        public void AddTwoElements_Add_IndexZeroToOne()
+        public void AddTwoElements_AddIndex_IndexZeroToOne()
         {
             MadeUpList myList = new MadeUpList();
             int[] MadeUpList = new[] {16, 15 };
@@ -41,7 +41,7 @@ namespace UnitTestProject1
             Assert.AreEqual(expectedValue2, actualValue2);
         }
         [TestMethod]
-        public void AddFourElements_Add_IndexZeroToThree()
+        public void AddFourElements_AddIndex_IndexZeroToThree()
         {
             MadeUpList myList = new MadeUpList();
             int[] MadeUpList = new[] { 16, 15, 14, 13};
@@ -70,7 +70,7 @@ namespace UnitTestProject1
 
         }
         [TestMethod]
-        public void AddTenElements_Add_IndexZeroToNine()
+        public void AddTenElements_AddIndex_IndexZeroToNine()
         {
             MadeUpList myList = new MadeUpList();
             int[] MadeUpList = new[] { 16, 15, 14, 13, 12, 11, 10, 9, 8, 7};
@@ -131,7 +131,7 @@ namespace UnitTestProject1
 
         }
         [TestMethod]
-        public void AddTwelveElements_Add_IndexZeroToEleven()
+        public void AddTwelveElements_AddIndex_IndexZeroToEleven()
         {
             MadeUpList myList = new MadeUpList();
             int[] MadeUpList = new[] { 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5 };
