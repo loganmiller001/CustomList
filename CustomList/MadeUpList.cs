@@ -8,7 +8,8 @@ namespace CustomList
 {
     public class MadeUpList
     {
-
+        public string Words { get; set; }
+        public int Numbers { get; set; }
 
         public MadeUpList()
         {
@@ -50,6 +51,12 @@ namespace CustomList
             }
         }
 
+        public override string ToString()
+        {
+            return "Person " + Words + Numbers + " ";
+           
+            
+        }
     }
 }
     
