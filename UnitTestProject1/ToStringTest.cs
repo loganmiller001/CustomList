@@ -5,13 +5,13 @@ using CustomList;
 namespace UnitTestProject1
 {
     [TestClass]
-    public class ToStringTest<T>
+    public class ToStringTest
     {
-        public MadeUpList<T> myList;
+        
         [TestMethod]
         public void MyOverrideToString_ToString_CheckReturn()
         {
-            MadeUpList<T> myList = new MadeUpList<T> {Words="Blah", Numbers = 55 };
+            MadeUpList<int> myList = new MadeUpList<int> {Words="Blah", Numbers = 55 };
             Console.WriteLine(myList);
 
 

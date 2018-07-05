@@ -2,17 +2,18 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using CustomList;
 
+
 namespace UnitTestProject1
 {
     [TestClass]
     public class AddTest
     {
-        public MadeUpList myList;
+
 
         [TestMethod]
         public void AddOneElement_AddIndex_IndexZero()
         {
-            MadeUpList myList = new MadeUpList();
+           MadeUpList<int> myList = new MadeUpList<int>();
             int[] MadeUpList = new[] { 16 };
             int expectedValue = 16;
             int actualValue;
@@ -25,7 +26,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void AddTwoElements_AddIndex_IndexZeroToOne()
         {
-            MadeUpList myList = new MadeUpList();
+            MadeUpList<int> myList = new MadeUpList<int>();
             int[] MadeUpList = new[] {16, 15 };
             int expectedValue1 = 16;
             int expectedValue2 = 15;
@@ -43,7 +44,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void AddFourElements_AddIndex_IndexZeroToThree()
         {
-            MadeUpList myList = new MadeUpList();
+            MadeUpList<int> myList = new MadeUpList<int>();
             int[] MadeUpList = new[] { 16, 15, 14, 13};
             int expectedValue1 = 16;
             int expectedValue2 = 15;
@@ -72,7 +73,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void AddTenElements_AddIndex_IndexZeroToNine()
         {
-            MadeUpList myList = new MadeUpList();
+            MadeUpList<int> myList = new MadeUpList<int>();
             int[] MadeUpList = new[] { 16, 15, 14, 13, 12, 11, 10, 9, 8, 7};
             int expectedValue1 = 16;
             int expectedValue2 = 15;
@@ -133,7 +134,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void AddTwelveElements_AddIndex_IndexZeroToEleven()
         {
-            MadeUpList myList = new MadeUpList();
+            MadeUpList<int> myList = new MadeUpList<int>();
             int[] MadeUpList = new[] { 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5 };
             int expectedValue1 = 16;
             int expectedValue2 = 15;

@@ -53,6 +53,7 @@
     <Compile Include="RemoveTest.cs" />
     <Compile Include="IndexerTest.cs" />
     <Compile Include="ToStringTest.cs" />
+    <Compile Include="IterableTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
