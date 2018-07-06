@@ -106,6 +106,10 @@ namespace CustomList
             return GetEnumerator();
         }
 
+        public static MadeUpList<T> operator + (MadeUpList<T> madeUpList)
+        {
+            return madeUpList;
+        }
 
     }
 }

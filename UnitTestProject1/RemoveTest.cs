@@ -196,6 +196,33 @@ namespace UnitTestProject1
             Assert.AreEqual(expectedValue11, actualValue11);
             Assert.AreEqual(expectedValue12, actualValue12);
         }
+
+        [TestMethod]
+        public void TestRemove_Remove_ReturnTrue()
+        {
+            MadeUpList<int> myList = new MadeUpList<int>();
+            int[] MadeUpList = new[] { 16, 15, 14, 13 };
+            bool expectedValue = myList.RemoveCount(15);
+            bool actualValue;
+
+
+            actualValue = myList.RemoveCount(15);
+
+            Assert.AreEqual(expectedValue, actualValue);
+        }
+        [TestMethod]
+        public void TestRemove_Remove_ReturnFalse()
+        {
+            MadeUpList<int> myList = new MadeUpList<int>();
+            int[] MadeUpList = new[] { 16, 15, 14, 13 };
+            bool expectedValue = myList.RemoveCount(20);
+            bool actualValue;
+
+
+            actualValue = myList.RemoveCount(20);
+
+            Assert.AreEqual(expectedValue, actualValue);
+        }
     }
 }
 

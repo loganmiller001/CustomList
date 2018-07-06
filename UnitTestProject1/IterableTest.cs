@@ -12,10 +12,7 @@ namespace UnitTestProject1
         {
             MadeUpList<int> myList = new MadeUpList<int>();
             int[] madeUpList = new int[5] { 1, 2, 3, 4, 5};
-            for (int i = 0 -1; i > 0; i--)
-            {
-                return i;
-            }
+            
             
             
             
