@@ -44,12 +44,32 @@ namespace CustomList
 
         }
 
-        public void RemoveCount(int value)
+        public bool RemoveCount(T itemToRemove)
         {
-            MadeUpList<T>[] myList = new MadeUpList<T>[12];
-            int[] MadeUpList = new[] { 12, 13, 14, 15, 16 };
-            MadeUpList.Except(new int[] { 12 }).ToArray();
+            T[] newArray = new T[ArrayCapacity];
 
+            for (int i = 0; i < ArrayCount; i++ )
+            {
+                if (Array[i].Equals(itemToRemove))
+                {
+                    ArrayCount--;
+                    ShiftArray();
+                    return true;
+                }
+
+            }
+            return false;
+        }
+
+        public void ShiftArray()
+        {
+            T[] newArray = new T[ArrayCapacity];
+
+            for (int i = 0; i < ArrayCount; i++)
+            {
+                newArray[i] = Array[i];
+            }
+            newArray = Array;
         }
 
 
