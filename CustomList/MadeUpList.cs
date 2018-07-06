@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CustomList
 {
-    public class MadeUpList<T>:IEnumerable
+    public class MadeUpList<T> : IEnumerable
     {
         public T[] Array { get; set; }
         public int ArrayCapacity { get; set; }
@@ -19,13 +19,28 @@ namespace CustomList
 
         public MadeUpList()
         {
-            List<int> myMadeUpList = new List<int>();
+            ArrayCapacity = 5;
+            ArrayCount = 0;
+            Array = new T[ArrayCapacity];
 
         }
-        public int[] myList = new int[6] { 1, 2, 3, 4, 5, 6};
+        public int[] myList = new int[6] { 1, 2, 3, 4, 5, 6 };
         public float[] myMadeUpList = new float[10] { 20, 19, 18, 17, 16, 15, 14, 13, 12, 11 };
 
         public void AddIndex(T itemToAdd)
+        {
+
+            Array[ArrayCount] = itemToAdd;
+            ArrayCount++;
+            CheckCapacity();
+        }
+
+        public int Count()
+        {
+            return ArrayCount;
+        }
+
+        public void CheckCapacity()
         {
             if (ArrayCapacity >= ArrayCount)
             {
@@ -38,10 +53,6 @@ namespace CustomList
                 }
                 Array = newArray;
             }
-            Array[ArrayCount] = itemToAdd;
-            ArrayCount++;
-
-
         }
 
         public bool RemoveCount(T itemToRemove)

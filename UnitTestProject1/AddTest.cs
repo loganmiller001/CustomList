@@ -199,5 +199,21 @@ namespace UnitTestProject1
             Assert.AreEqual(expectedValue11, actualValue11);
             Assert.AreEqual(expectedValue12, actualValue12);
         }
+        [TestMethod]
+        public void CountIndex_Count_Length()
+        {
+            MadeUpList<int> myList = new MadeUpList<int>();
+            int expected = 4;
+            myList.AddIndex(4);
+            myList.AddIndex(5);
+            myList.AddIndex(6);
+            myList.AddIndex(7);
+
+            int actual = myList.Count();
+            Assert.AreEqual(expected, actual);
+
+
+
+        }
     }
 }

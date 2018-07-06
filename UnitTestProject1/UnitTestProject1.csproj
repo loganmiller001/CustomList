@@ -54,6 +54,7 @@
     <Compile Include="IndexerTest.cs" />
     <Compile Include="ToStringTest.cs" />
     <Compile Include="IterableTest.cs" />
+    <Compile Include="OverLoad+Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
