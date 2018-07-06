@@ -11,9 +11,11 @@ namespace CustomList
     {
         public T[] Array { get; set; }
         public int ArrayCapacity { get; set; }
-        public T this[int i] {get { return Array[i]; } set { Array[i] = value; } }
+        public int ArrayCount { get; set; }
+        //public T this[int i] {get { return Array[i]; } set { Array[i] = value; } }
         public string Words { get; set; }
         public int Numbers { get; set; }
+        int top = 0;
 
         public MadeUpList()
         {
@@ -23,13 +25,21 @@ namespace CustomList
         public int[] myList = new int[6] { 1, 2, 3, 4, 5, 6};
         public float[] myMadeUpList = new float[10] { 20, 19, 18, 17, 16, 15, 14, 13, 12, 11 };
 
-        public void AddIndex(int value)
+        public void AddIndex(T itemToAdd)
         {
+            if (ArrayCapacity >= ArrayCount)
+            {
+                ArrayCapacity += 5;
+                T[] newArray = new T[ArrayCapacity];
 
-            MadeUpList<T>[] myList = new MadeUpList<T>[12];
-            myList[1] = new MadeUpList<T> { };
-            myList[2] = new MadeUpList<T> { };
-
+                for (int i = 0; i < ArrayCount; i++)
+                {
+                    newArray[i] = Array[i];
+                }
+                Array = newArray;
+            }
+            Array[ArrayCount] = itemToAdd;
+            ArrayCount++;
 
 
         }
@@ -42,18 +52,19 @@ namespace CustomList
 
         }
 
-        
-        //public float this[int index]
-        //{
-        //    get
-        //    {
-        //        return myMadeUpList[index];
-        //    }
-        //    set
-        //    {
-        //        myMadeUpList[index] = value;
-        //    }
-        //}
+
+        public float this[int i]
+        {
+            get
+            {
+                return myMadeUpList[i];
+            }
+            set
+            {
+                myMadeUpList[i] = value;
+            }
+            
+        }
 
         public override string ToString()
         {
@@ -62,14 +73,13 @@ namespace CustomList
             
         }
 
-        public IEnumerator<int> GetEnumerator()
+        public IEnumerator<T> GetEnumerator()
         {
-            yield return myList[0];
-            yield return myList[1];
-            yield return myList[2];
-            yield return myList[3];
-            yield return myList[4];
-            yield return myList[5];
+            for ( int index = top - 1; index > 0; index --)
+            {
+                yield return Array[index];
+            }
+
         }
         IEnumerator IEnumerable.GetEnumerator()
         {
