@@ -32,9 +32,10 @@ namespace UnitTestProject1
             int expected = (list2[0] + list2[1]);
             int actual;
 
-            actual = testList - ((list1[0] + list1[1]) + (list3[0] + list3[1]));
+            actual = testList - (((list1[0]) + (list1[1])) + ((list3[0]) + list3[1]));
 
             Assert.AreEqual(expected, actual);
+            
         }
     }
 }

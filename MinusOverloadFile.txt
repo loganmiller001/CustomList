@@ -1,0 +1,24 @@
+The method for overloading the - operator works by taking one or more instances of the MadeUpList class and subtacting it from the the generated custom list. The syntax for this method is as follows:
+Syntax:
+        public static MadeUpList<T> operator - (MadeUpList<T> Array1, MadeUpList<T> Array2)
+        {
+            MadeUpList<T> newArray = Array1 - Array2;
+            return newArray;
+        }
+Parameters:
+Both parameters, Array1 and Array2, can be separate instances that can be subtracted from each other to return a newArray that will display the values left from eiter array. This allows both arrays to be subtracted from each other, or you may take multiple instances out of an array to make a new one.
+Return Type:
+The return type will be whatever type you use to instantiate you list class as. So if you set up the MyCustomList with <int> or <string>, it will return the newArray as that type. This is done by setting up the method with a <T> generic as to be able to input different types into the list.
+Example:
+The following example will add two instances using the + overload, and then subtract one instance from the list to create a new list with the values left over.
+        public void SubtractInstance_OverLoadOperator_OneInstance()
+        {
+            MadeUpList<int> aList = new MadeUpList<int>();
+            int[] list1 = new[] { 1, 2 };
+            int[] list2 = new[] { 3, 4 };
+            int testList = (list1[0] + list1[1]) + (list2[0] + list2[1]);
+            int expected = (list1[0] + list1[1]);
+            int actual;
+
+            actual = testList - (list2[0] + list2[1]);
+	// output testList[]{ 1, 2}
