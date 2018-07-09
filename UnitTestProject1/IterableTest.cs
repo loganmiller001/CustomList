@@ -10,15 +10,11 @@ namespace UnitTestProject1
         [TestMethod]
         public void IndexesShouldHaveValue_GetEnumerator_Value()
         {
-            MadeUpList<string> myList = new MadeUpList<string>();
-            string[] madeUpList = new string[5] {"Bob", "Ross", "Cole", "Dale", "Dan"};
+            MadeUpList<int> myList = new MadeUpList<int>();
+            int[] madeUpList = new int[5] {1, 2, 3, 4, 5};
 
-            string expectedResult = (madeUpList.GetEnumerator().ToString());
-            string actualResult;
 
-            actualResult = (myList.GetEnumerator().ToString());
-
-            Assert.AreEqual(expectedResult, actualResult);
+            
          
         }
     }

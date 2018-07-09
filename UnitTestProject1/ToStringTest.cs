@@ -11,10 +11,50 @@ namespace UnitTestProject1
         [TestMethod]
         public void MyOverrideToString_ToString_CheckReturn()
         {
-            MadeUpList<int> myList = new MadeUpList<int> {Words="Blah", Numbers = 55 };
-            Console.WriteLine(myList);
+            MadeUpList<int> myList = new MadeUpList<int>();
+            int[] madeUpList = new int[] {1 };
+            string expectedValue = "1" ;
+
+
+            myList.AddIndex(1);
+
+            string actualValue = myList.ToString();
+
+            Assert.AreEqual(expectedValue, actualValue);
 
 
         }
+
+        [TestMethod]
+        public void MyOverrrideToString_ToString_MultipleInts()
+        {
+            MadeUpList<int> stringTest = new MadeUpList<int>();
+            string expectedValue1 = "17";
+            string expectedValue2 = "18";
+            string expectedValue3 = "19";
+            string expectedValue4 = "20";
+            string actualValue1;
+            string actualValue2;
+            string actualValue3;
+            string actualValue4;
+
+
+            stringTest.AddIndex(17);
+            stringTest.AddIndex(18);
+            stringTest.AddIndex(19);
+            stringTest.AddIndex(20);
+
+            actualValue1 = stringTest[3].ToString();
+            actualValue2 = stringTest[2].ToString();
+            actualValue3 = stringTest[1].ToString();
+            actualValue4 = stringTest[0].ToString();
+            Assert.AreEqual(expectedValue1, actualValue1);
+            Assert.AreEqual(expectedValue2, actualValue2);
+            Assert.AreEqual(expectedValue3, actualValue3);
+            Assert.AreEqual(expectedValue4, actualValue4);
+        }
+
+
+       
     }
 }

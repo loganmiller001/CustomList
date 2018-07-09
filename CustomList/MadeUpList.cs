@@ -12,10 +12,8 @@ namespace CustomList
         public T[] Array { get; set; }
         public int ArrayCapacity { get; set; }
         public int ArrayCount { get; set; }
-        //public T this[int i] {get { return Array[i]; } set { Array[i] = value; } }
-        public string Words { get; set; }
-        public int Numbers { get; set; }
         int top = 0;
+        int i;
 
         public MadeUpList()
         {
@@ -94,18 +92,25 @@ namespace CustomList
             {
                 myMadeUpList[i] = value;
             }
-            
+
         }
 
         public override string ToString()
         {
-            return "Person " + Words + Numbers + " ";
-           
+            string stringArray = "";
+            if (ArrayCount != 0)
+            {
+                for (int i = 0; i < ArrayCount; i++);
+                stringArray = Convert.ToString(Array[i]);
+            }
+
+            return stringArray;
             
         }
 
         public IEnumerator GetEnumerator()
         {
+            
             for ( int index = top - 1; index > 0; index --)
             {
                 yield return myList[index];
