@@ -133,6 +133,28 @@ namespace CustomList
             MadeUpList<T> newArray = Array1 - Array2;
             return newArray;
         }
+
+        //public void ZipArrays(T SecondArray)
+        //{
+        //    int[] Array1 = { 1, 2, 3, 4, };
+        //    string[] Array2 = { "one", "two", "three", "four" };
+
+        //    var newArray = Array1.Zip(Array2, (first, second) => first + "" + second);
+
+        //    foreach (var item in newArray)
+        //    {
+        //        Console.WriteLine(item);
+        //    }
+        //}
+        public void ZipArrays2()
+        {
+            string[] array1 = new string[] { "1", "2", "3" };
+            string[] array2 = new string[] { "6", "7", "8" };
+
+            string[] newArray = array1.Zip(array2, (a, b) =>
+            new[] { a, b }).SelectMany(x => x).ToArray();
+            
+        }
     }
 }
     

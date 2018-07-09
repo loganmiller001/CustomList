@@ -56,6 +56,7 @@
     <Compile Include="IterableTest.cs" />
     <Compile Include="OverLoad+Test.cs" />
     <Compile Include="Overload-Test.cs" />
+    <Compile Include="ZipTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
