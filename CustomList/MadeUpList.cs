@@ -104,11 +104,11 @@ namespace CustomList
             
         }
 
-        public IEnumerator<T> GetEnumerator()
+        public IEnumerator GetEnumerator()
         {
             for ( int index = top - 1; index > 0; index --)
             {
-                yield return Array[index];
+                yield return myList[index];
             }
 
         }

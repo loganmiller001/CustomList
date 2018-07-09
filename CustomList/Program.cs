@@ -8,8 +8,13 @@ namespace CustomList
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            MadeUpList<int> myMadeUpList = new MadeUpList<int>();
+            foreach (int index in myMadeUpList)
+            {
+                Console.WriteLine(index + " ");
+            }
         }
     }
 }
