@@ -122,9 +122,9 @@ namespace CustomList
             return GetEnumerator();
         }
 
-        public static MadeUpList<T> operator + (MadeUpList<T> madeUpList)
+        public static MadeUpList<T> operator + (MadeUpList<T> Array)
         {
-            return madeUpList;
+            return Array;
         }
 
     }
