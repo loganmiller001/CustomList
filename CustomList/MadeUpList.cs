@@ -23,7 +23,7 @@ namespace CustomList
 
         }
         public int[] myList = new int[6] { 1, 2, 3, 4, 5, 6 };
-     
+        public T[] aList;
 
         public void AddIndex(T itemToAdd)
         {
@@ -76,33 +76,6 @@ namespace CustomList
             }
         }
 
-        //public bool RemoveCount(T itemToRemove)
-        //{
-        //    T[] newArray = new T[ArrayCapacity];
-
-        //    for (int i = 0; i < ArrayCount; i++ )
-        //    {
-        //        if (Array[i].Equals(itemToRemove))
-        //        {
-        //            ArrayCount--;
-        //            ShiftArray();
-        //            return true;
-        //        }
-
-        //    }
-        //    return false;
-        //}
-
-        //public void ShiftArray()
-        //{
-        //    T[] newArray = new T[ArrayCapacity];
-
-        //    for (int i = 0; i < ArrayCount; i++)
-        //    {
-        //        newArray[i] = Array[i];
-        //    }
-        //    Array = newArray;
-        //}
 
 
         public T this[int j]
@@ -169,31 +142,50 @@ namespace CustomList
             return Array1;
         }
 
-        public void Zip(T[]Array1, T[] Array2)
+        public MadeUpList<T> Zip(MadeUpList<T> list2)
         {
-            T[] mockArray = new T[ArrayCount];
-            int startingCount = 0;
-            int zipper = 0;
+            MadeUpList<T> list1 = new MadeUpList<T>();
 
-            foreach (var Array1_item in Array1)
+            for (int i = 0; i < ArrayCount + list2.ArrayCount; i++)
             {
-                foreach (var Array2_item in Array2)
+                if (ArrayCount > i)
                 {
-                    if (zipper == 0)
-                    {
-                        mockArray[startingCount] = Array1_item;
-                        zipper = 1;
-                    }
-                    if (zipper == 1)
-                    {
-                        mockArray[startingCount] = Array2_item;
-                        zipper = 0;
-                    }
+                    list1.AddIndex(Array[i]);
                 }
-                startingCount++;
+                if (list2.ArrayCount > i)
+                {
+                    list1.AddIndex(list2.Array[i]);
+                }
             }
-            Array = mockArray;
+            return list1;
         }
+ 
+        //public T ZipArrays(T[] Array1, T[] Array2)
+        //{
+        //    T[] mockArray = new T[ArrayCount];
+        //    int startingCount = 0;
+        //    int zipper = 0;
+
+        //    foreach (var Array1_item in Array1)
+        //    {
+        //        foreach (var Array2_item in Array2)
+        //        {
+        //            if (zipper == 0)
+        //            {
+        //                mockArray[startingCount] = Array1_item;
+        //                zipper = 1;
+        //            }
+        //            if (zipper == 1)
+        //            {
+        //                mockArray[startingCount] = Array2_item;
+        //                zipper = 0;
+        //            }
+        //        }
+        //        startingCount++;
+        //    }
+        //    Array[i] = mockArray[i];
+        //    return Array[i];
+        //}
 
 
 
