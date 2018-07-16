@@ -13,7 +13,6 @@ namespace CustomList
         public int ArrayCapacity { get; set; }
         public int ArrayCount { get; set; }
         int top = 0;
-        int i;
 
         public MadeUpList()
         {
@@ -73,15 +72,15 @@ namespace CustomList
 
 
 
-        public T this[int j]
+        public T this[int i]
         {
             get
             {
-                return Array[j];
+                return Array[i];
             }
             set
             {
-                Array[j] = value;
+                Array[i] = value;
             }
         }
       
