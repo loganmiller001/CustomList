@@ -18,7 +18,7 @@ namespace UnitTestProject1
             int expectedValue = 16;
             int actualValue;
 
-            myList.AddIndex(expectedValue);
+            myList.Add(expectedValue);
             actualValue = MadeUpList[0];
 
             Assert.AreEqual(expectedValue, actualValue);
@@ -33,8 +33,8 @@ namespace UnitTestProject1
             int actualValue1;
             int actualValue2;
 
-            myList.AddIndex(expectedValue1);
-            myList.AddIndex(expectedValue2);
+            myList.Add(expectedValue1);
+            myList.Add(expectedValue2);
             actualValue1 = MadeUpList[0];
             actualValue2 = MadeUpList[1];
 
@@ -55,10 +55,10 @@ namespace UnitTestProject1
             int actualValue3;
             int actualValue4;
 
-            myList.AddIndex(expectedValue1);
-            myList.AddIndex(expectedValue2);
-            myList.AddIndex(expectedValue3);
-            myList.AddIndex(expectedValue4);
+            myList.Add(expectedValue1);
+            myList.Add(expectedValue2);
+            myList.Add(expectedValue3);
+            myList.Add(expectedValue4);
             actualValue1 = MadeUpList[0];
             actualValue2 = MadeUpList[1];
             actualValue3 = MadeUpList[2];
@@ -96,16 +96,16 @@ namespace UnitTestProject1
             int actualValue9;
             int actualValue10;
 
-            myList.AddIndex(expectedValue1);
-            myList.AddIndex(expectedValue2);
-            myList.AddIndex(expectedValue3);
-            myList.AddIndex(expectedValue4);
-            myList.AddIndex(expectedValue5);
-            myList.AddIndex(expectedValue6);
-            myList.AddIndex(expectedValue7);
-            myList.AddIndex(expectedValue8);
-            myList.AddIndex(expectedValue9);
-            myList.AddIndex(expectedValue10);
+            myList.Add(expectedValue1);
+            myList.Add(expectedValue2);
+            myList.Add(expectedValue3);
+            myList.Add(expectedValue4);
+            myList.Add(expectedValue5);
+            myList.Add(expectedValue6);
+            myList.Add(expectedValue7);
+            myList.Add(expectedValue8);
+            myList.Add(expectedValue9);
+            myList.Add(expectedValue10);
             actualValue1 = MadeUpList[0];
             actualValue2 = MadeUpList[1];
             actualValue3 = MadeUpList[2];
@@ -161,18 +161,18 @@ namespace UnitTestProject1
             int actualValue11;
             int actualValue12;
 
-            myList.AddIndex(expectedValue1);
-            myList.AddIndex(expectedValue2);
-            myList.AddIndex(expectedValue3);
-            myList.AddIndex(expectedValue4);
-            myList.AddIndex(expectedValue5);
-            myList.AddIndex(expectedValue6);
-            myList.AddIndex(expectedValue7);
-            myList.AddIndex(expectedValue8);
-            myList.AddIndex(expectedValue9);
-            myList.AddIndex(expectedValue10);
-            myList.AddIndex(expectedValue11);
-            myList.AddIndex(expectedValue12);
+            myList.Add(expectedValue1);
+            myList.Add(expectedValue2);
+            myList.Add(expectedValue3);
+            myList.Add(expectedValue4);
+            myList.Add(expectedValue5);
+            myList.Add(expectedValue6);
+            myList.Add(expectedValue7);
+            myList.Add(expectedValue8);
+            myList.Add(expectedValue9);
+            myList.Add(expectedValue10);
+            myList.Add(expectedValue11);
+            myList.Add(expectedValue12);
             actualValue1 = MadeUpList[0];
             actualValue2 = MadeUpList[1];
             actualValue3 = MadeUpList[2];
@@ -204,10 +204,10 @@ namespace UnitTestProject1
         {
             MadeUpList<int> myList = new MadeUpList<int>();
             int expected = 4;
-            myList.AddIndex(4);
-            myList.AddIndex(5);
-            myList.AddIndex(6);
-            myList.AddIndex(7);
+            myList.Add(4);
+            myList.Add(5);
+            myList.Add(6);
+            myList.Add(7);
 
             int actual = myList.ArrayCount;
             Assert.AreEqual(expected, actual);

@@ -25,7 +25,7 @@ namespace CustomList
         public int[] myList = new int[6] { 1, 2, 3, 4, 5, 6 };
         public T[] aList;
 
-        public void AddIndex(T itemToAdd)
+        public void Add(T itemToAdd)
         {
 
             Array[ArrayCount] = itemToAdd;
@@ -123,7 +123,7 @@ namespace CustomList
         {
             foreach (T item in Array2)
             {
-                Array1.AddIndex(item);
+                Array1.Add(item);
             }
             return Array1;
         }
@@ -145,11 +145,11 @@ namespace CustomList
             {
                 if (ArrayCount > i)
                 {
-                    list1.AddIndex(Array[i]);
+                    list1.Add(Array[i]);
                 }
                 if (list2.ArrayCount > i)
                 {
-                    list1.AddIndex(list2.Array[i]);
+                    list1.Add(list2.Array[i]);
                 }
             }
             return list1;
