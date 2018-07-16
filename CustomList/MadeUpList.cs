@@ -53,69 +53,69 @@ namespace CustomList
             }
         }
 
-        public bool RemoveCount(T itemToRemove)
+        public void Remove(T a)
         {
-            T[] newArray = new T[ArrayCapacity];
 
-            for (int i = 0; i < ArrayCount; i++ )
-            {
-                if (Array[i].Equals(itemToRemove))
-                {
-                    ArrayCount--;
-                    ShiftArray();
-                    return true;
-                }
-
-            }
-            return false;
         }
 
-        public void ShiftArray()
-        {
-            T[] newArray = new T[ArrayCapacity];
+        //public bool RemoveCount(T itemToRemove)
+        //{
+        //    T[] newArray = new T[ArrayCapacity];
 
-            for (int i = 0; i < ArrayCount; i++)
-            {
-                newArray[i] = Array[i];
-            }
-            Array = newArray;
-        }
+        //    for (int i = 0; i < ArrayCount; i++ )
+        //    {
+        //        if (Array[i].Equals(itemToRemove))
+        //        {
+        //            ArrayCount--;
+        //            ShiftArray();
+        //            return true;
+        //        }
+
+        //    }
+        //    return false;
+        //}
+
+        //public void ShiftArray()
+        //{
+        //    T[] newArray = new T[ArrayCapacity];
+
+        //    for (int i = 0; i < ArrayCount; i++)
+        //    {
+        //        newArray[i] = Array[i];
+        //    }
+        //    Array = newArray;
+        //}
 
 
-        public T this[int i]
+        public T this[int j]
         {
             get
             {
-                return Array[i];
+                return Array[j];
             }
             set
             {
-                Array[i] = value;
+                Array[j] = value;
             }
         }
-        //public float this[int i]
-        //{
-        //    get
-        //    {
-        //        return myMadeUpList[i];
-        //    }
-        //    set
-        //    {
-        //        myMadeUpList[i] = value;
-        //    }
-
-        //}
+      
 
         public override string ToString()
         {
-            string stringArray = "";
-            if (ArrayCount != 0)
+            string returnValue = string.Empty;
+            foreach (T item in this)
             {
-                for (int i = 0; i < ArrayCount; i++);
-                stringArray = Convert.ToString(Array[i]);
+                if (string.IsNullOrEmpty(returnValue))
+                {
+                    returnValue += item.ToString();
+                }
+                else
+                {
+                    returnValue += string.Format(", {0}", item);
+                }
+                
             }
-
-            return stringArray;
+            return returnValue;
             
         }
 
