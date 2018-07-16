@@ -33,11 +33,6 @@ namespace CustomList
             CheckCapacity();
         }
 
-        public int Count()
-        {
-            return ArrayCount;
-        }
-
         public void CheckCapacity()
         {
             if (ArrayCapacity >= ArrayCount)

@@ -209,7 +209,7 @@ namespace UnitTestProject1
             myList.AddIndex(6);
             myList.AddIndex(7);
 
-            int actual = myList.Count();
+            int actual = myList.ArrayCount;
             Assert.AreEqual(expected, actual);
 
 
