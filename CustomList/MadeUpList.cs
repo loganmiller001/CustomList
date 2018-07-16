@@ -135,27 +135,46 @@ namespace CustomList
 
         public static MadeUpList<T> operator + (MadeUpList<T> Array1, MadeUpList<T> Array2)
         {
-            MadeUpList<T>newArray = Array1 + Array2;
-            return newArray;
+            foreach (T item in Array2)
+            {
+                Array1.AddIndex(item);
+            }
+            return Array1;
         }
 
         public static MadeUpList<T> operator - (MadeUpList<T> Array1, MadeUpList<T> Array2)
         {
-            MadeUpList<T> newArray = Array1 - Array2;
-            return newArray;
+           foreach(T items in Array2)
+            {
+                Array1.Remove(items);
+            }
+            return Array1;
         }
 
-        public void ZipArrays(T SecondArray)
+        public void Zip(T[]Array1, T[] Array2)
         {
-            int[] Array1 = { 1, 2, 3, 4, };
-            string[] Array2 = { "one", "two", "three", "four" };
+            T[] mockArray = new T[ArrayCount];
+            int startingCount = 0;
+            int zipper = 0;
 
-            var newArray = Array1.Zip(Array2, (first, second) => first + "" + second);
-
-            foreach (var item in newArray)
+            foreach (var Array1_item in Array1)
             {
-                Console.WriteLine(item);
+                foreach (var Array2_item in Array2)
+                {
+                    if (zipper == 0)
+                    {
+                        mockArray[startingCount] = Array1_item;
+                        zipper = 1;
+                    }
+                    if (zipper == 1)
+                    {
+                        mockArray[startingCount] = Array2_item;
+                        zipper = 0;
+                    }
+                }
+                startingCount++;
             }
+            Array = mockArray;
         }
 
 
