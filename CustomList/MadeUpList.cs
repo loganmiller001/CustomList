@@ -53,9 +53,27 @@ namespace CustomList
             }
         }
 
-        public void Remove(T a)
+        public void Remove(T removeItem)
         {
-
+     for (int i = 0; i < ArrayCount; i++)
+            {
+                int itemCount = 0;
+                if (Array[i].Equals(removeItem))
+                {
+                    T[] item = new T[ArrayCount - 1];
+                    ArrayCount--;
+                    for(int j = 0; j < 0; j++)
+                    {
+                        itemCount++;
+                        Array[j] = Array[j];
+                    }
+                    for (int j = i + 1; j < ArrayCount; j++)
+                    {
+                        itemCount++;
+                        Array[j] = item[i];
+                    }
+                }
+            }
         }
 
         //public bool RemoveCount(T itemToRemove)

@@ -15,7 +15,7 @@ namespace UnitTestProject1
             int expectedValue = 16;
             int actualValue;
 
-            myList.RemoveCount(expectedValue);
+            myList.Remove(expectedValue);
             actualValue = MadeUpList[0];
 
             Assert.AreEqual(expectedValue, actualValue);
@@ -30,8 +30,8 @@ namespace UnitTestProject1
             int actualValue1;
             int actualValue2;
 
-            myList.RemoveCount(expectedValue1);
-            myList.RemoveCount(expectedValue2);
+            myList.Remove(expectedValue1);
+            myList.Remove(expectedValue2);
             actualValue1 = MadeUpList[0];
             actualValue2 = MadeUpList[1];
 
@@ -52,10 +52,10 @@ namespace UnitTestProject1
             int actualValue3;
             int actualValue4;
 
-            myList.RemoveCount(expectedValue1);
-            myList.RemoveCount(expectedValue2);
-            myList.RemoveCount(expectedValue3);
-            myList.RemoveCount(expectedValue4);
+            myList.Remove(expectedValue1);
+            myList.Remove(expectedValue2);
+            myList.Remove(expectedValue3);
+            myList.Remove(expectedValue4);
             actualValue1 = MadeUpList[0];
             actualValue2 = MadeUpList[1];
             actualValue3 = MadeUpList[2];
@@ -93,16 +93,16 @@ namespace UnitTestProject1
             int actualValue9;
             int actualValue10;
 
-            myList.RemoveCount(expectedValue1);
-            myList.RemoveCount(expectedValue2);
-            myList.RemoveCount(expectedValue3);
-            myList.RemoveCount(expectedValue4);
-            myList.RemoveCount(expectedValue5);
-            myList.RemoveCount(expectedValue6);
-            myList.RemoveCount(expectedValue7);
-            myList.RemoveCount(expectedValue8);
-            myList.RemoveCount(expectedValue9);
-            myList.RemoveCount(expectedValue10);
+            myList.Remove(expectedValue1);
+            myList.Remove(expectedValue2);
+            myList.Remove(expectedValue3);
+            myList.Remove(expectedValue4);
+            myList.Remove(expectedValue5);
+            myList.Remove(expectedValue6);
+            myList.Remove(expectedValue7);
+            myList.Remove(expectedValue8);
+            myList.Remove(expectedValue9);
+            myList.Remove(expectedValue10);
             actualValue1 = MadeUpList[0];
             actualValue2 = MadeUpList[1];
             actualValue3 = MadeUpList[2];
@@ -158,18 +158,18 @@ namespace UnitTestProject1
             int actualValue11;
             int actualValue12;
 
-            myList.RemoveCount(expectedValue1);
-            myList.RemoveCount(expectedValue2);
-            myList.RemoveCount(expectedValue3);
-            myList.RemoveCount(expectedValue4);
-            myList.RemoveCount(expectedValue5);
-            myList.RemoveCount(expectedValue6);
-            myList.RemoveCount(expectedValue7);
-            myList.RemoveCount(expectedValue8);
-            myList.RemoveCount(expectedValue9);
-            myList.RemoveCount(expectedValue10);
-            myList.RemoveCount(expectedValue11);
-            myList.RemoveCount(expectedValue12);
+            myList.Remove(expectedValue1);
+            myList.Remove(expectedValue2);
+            myList.Remove(expectedValue3);
+            myList.Remove(expectedValue4);
+            myList.Remove(expectedValue5);
+            myList.Remove(expectedValue6);
+            myList.Remove(expectedValue7);
+            myList.Remove(expectedValue8);
+            myList.Remove(expectedValue9);
+            myList.Remove(expectedValue10);
+            myList.Remove(expectedValue11);
+            myList.Remove(expectedValue12);
             actualValue1 = MadeUpList[0];
             actualValue2 = MadeUpList[1];
             actualValue3 = MadeUpList[2];
@@ -197,32 +197,6 @@ namespace UnitTestProject1
             Assert.AreEqual(expectedValue12, actualValue12);
         }
 
-        [TestMethod]
-        public void TestRemove_Remove_ReturnTrue()
-        {
-            MadeUpList<int> myList = new MadeUpList<int>();
-            int[] MadeUpList = new[] { 16, 15, 14, 13 };
-            bool expectedValue = myList.RemoveCount(15);
-            bool actualValue;
-
-
-            actualValue = myList.RemoveCount(15);
-
-            Assert.AreEqual(expectedValue, actualValue);
-        }
-        [TestMethod]
-        public void TestRemove_Remove_ReturnFalse()
-        {
-            MadeUpList<int> myList = new MadeUpList<int>();
-            int[] MadeUpList = new[] { 16, 15, 14, 13 };
-            bool expectedValue = myList.RemoveCount(20);
-            bool actualValue;
-
-
-            actualValue = myList.RemoveCount(20);
-
-            Assert.AreEqual(expectedValue, actualValue);
-        }
     }
 }
 

@@ -12,13 +12,13 @@ namespace UnitTestProject1
         public void MyOverrideToString_ToString_CheckReturn()
         {
             MadeUpList<int> myList = new MadeUpList<int>();
-            int[] madeUpList = new int[] {1 };
+            int[] stringList = new int[] {1 };
             string expectedValue = "1" ;
 
 
-            myList.AddIndex(1);
+           
 
-            string actualValue = myList.ToString();
+            string actualValue = stringList[0].ToString();
 
             Assert.AreEqual(expectedValue, actualValue);
 
@@ -29,6 +29,7 @@ namespace UnitTestProject1
         public void MyOverrrideToString_ToString_MultipleInts()
         {
             MadeUpList<int> stringTest = new MadeUpList<int>();
+            int[] stringList = new[] { 17, 18, 19, 20};
             string expectedValue1 = "17";
             string expectedValue2 = "18";
             string expectedValue3 = "19";
@@ -39,15 +40,11 @@ namespace UnitTestProject1
             string actualValue4;
 
 
-            stringTest.AddIndex(17);
-            stringTest.AddIndex(18);
-            stringTest.AddIndex(19);
-            stringTest.AddIndex(20);
 
-            actualValue1 = stringTest[3].ToString();
-            actualValue2 = stringTest[2].ToString();
-            actualValue3 = stringTest[1].ToString();
-            actualValue4 = stringTest[0].ToString();
+            actualValue1 = stringList[0].ToString();
+            actualValue2 = stringList[1].ToString();
+            actualValue3 = stringList[2].ToString();
+            actualValue4 = stringList[3].ToString();
             Assert.AreEqual(expectedValue1, actualValue1);
             Assert.AreEqual(expectedValue2, actualValue2);
             Assert.AreEqual(expectedValue3, actualValue3);
