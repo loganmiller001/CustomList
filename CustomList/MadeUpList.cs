@@ -160,32 +160,6 @@ namespace CustomList
             return list1;
         }
  
-        //public T ZipArrays(T[] Array1, T[] Array2)
-        //{
-        //    T[] mockArray = new T[ArrayCount];
-        //    int startingCount = 0;
-        //    int zipper = 0;
-
-        //    foreach (var Array1_item in Array1)
-        //    {
-        //        foreach (var Array2_item in Array2)
-        //        {
-        //            if (zipper == 0)
-        //            {
-        //                mockArray[startingCount] = Array1_item;
-        //                zipper = 1;
-        //            }
-        //            if (zipper == 1)
-        //            {
-        //                mockArray[startingCount] = Array2_item;
-        //                zipper = 0;
-        //            }
-        //        }
-        //        startingCount++;
-        //    }
-        //    Array[i] = mockArray[i];
-        //    return Array[i];
-        //}
 
 
 
