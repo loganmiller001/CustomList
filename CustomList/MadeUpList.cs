@@ -23,7 +23,7 @@ namespace CustomList
 
         }
         public int[] myList = new int[6] { 1, 2, 3, 4, 5, 6 };
-        public float[] myMadeUpList = new float[10] { 20, 19, 18, 17, 16, 15, 14, 13, 12, 11 };
+     
 
         public void AddIndex(T itemToAdd)
         {
@@ -78,22 +78,33 @@ namespace CustomList
             {
                 newArray[i] = Array[i];
             }
-            newArray = Array;
+            Array = newArray;
         }
 
 
-        public float this[int i]
+        public T this[int i]
         {
             get
             {
-                return myMadeUpList[i];
+                return Array[i];
             }
             set
             {
-                myMadeUpList[i] = value;
+                Array[i] = value;
             }
-
         }
+        //public float this[int i]
+        //{
+        //    get
+        //    {
+        //        return myMadeUpList[i];
+        //    }
+        //    set
+        //    {
+        //        myMadeUpList[i] = value;
+        //    }
+
+        //}
 
         public override string ToString()
         {
@@ -134,27 +145,21 @@ namespace CustomList
             return newArray;
         }
 
-        //public void ZipArrays(T SecondArray)
-        //{
-        //    int[] Array1 = { 1, 2, 3, 4, };
-        //    string[] Array2 = { "one", "two", "three", "four" };
-
-        //    var newArray = Array1.Zip(Array2, (first, second) => first + "" + second);
-
-        //    foreach (var item in newArray)
-        //    {
-        //        Console.WriteLine(item);
-        //    }
-        //}
-        public void ZipArrays2()
+        public void ZipArrays(T SecondArray)
         {
-            string[] array1 = new string[] { "1", "2", "3" };
-            string[] array2 = new string[] { "6", "7", "8" };
+            int[] Array1 = { 1, 2, 3, 4, };
+            string[] Array2 = { "one", "two", "three", "four" };
 
-            string[] newArray = array1.Zip(array2, (a, b) =>
-            new[] { a, b }).SelectMany(x => x).ToArray();
-            
+            var newArray = Array1.Zip(Array2, (first, second) => first + "" + second);
+
+            foreach (var item in newArray)
+            {
+                Console.WriteLine(item);
+            }
         }
+
+
+
     }
 }
     
